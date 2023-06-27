@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ming's Diner !!</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="icon" href="assets/icons.png" type="image/x-icon" />
+  </head>
+
+  <body onload="myFunction()">
+    <!-- Spinner -->
+    <div id="loading">
+      <div class="spinner">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+    </div>
+    <!-- End Spinner -->
+    <!-- Include navbar.html -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary transparent-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#home">Ming's Diner</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Include landing-page.html -->
+    <header id="home" class="jumbotron text-center">
+      <div class="container">
+        <h1>Welcome to Ming's Diner</h1>
+        <p>Experience the finest dining in town</p>
+        <a class="btn btn-primary" href="#menu">View Menu</a>
+      </div>
+    </header>
+
+    <!-- Include menu.html -->
+    <section id="menu" class="container">
+      <div class="container">
+        <h2 style="color: #ffffff">Our Bestsellers</h2>
+        <div id="menuCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <!-- Carousel indicators dynamically loaded here -->
+          </ol>
+          <div class="carousel-inner">
+            <!-- Menu items dynamically loaded here -->
+            <div id="menuItems" class="carousel-item"></div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#menuCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#menuCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include contact.html -->
+    <section id="contact" class="container contact-section">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="section-title">Contact&nbspUs</h2>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" id="submitBtn" class="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i class="fa fa-phone"></i>
+                  <p>Phone: +123456789</p>
+                </div>
+                <div class="contact-item">
+                  <i class="fa fa-envelope"></i>
+                  <p>Email: example@example.com</p>
+                </div>
+                <div class="contact-item">
+                  <i class="fa fa-map-marker"></i>
+                  <p>Address: 123 Street, City, Country</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add an alert container -->
+    <div id="alertContainer"></div>
+
+    <!-- Include footer.html -->
+    <footer
+      class="text-center bg-light p-3"
+      style="background-color: black !important; color: #ffffff"
+    >
+      <div class="container">
+        <p>&copy; 2023 Ming's Diner. All rights reserved.</p>
+      </div>
+      <a href="#" class="scroll-btn">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
